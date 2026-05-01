@@ -648,5 +648,56 @@
 
 
 
+/* ==================== ORBIT ANIMATIONS ==================== */
 
+/* Rotate the gradient border ring */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Orbit Ring 1 - Clockwise */
+@keyframes orbit {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Orbit Ring 2 - Counter Clockwise */
+@keyframes orbit-reverse {
+    from { transform: translate(-50%, -50%) rotate(360deg); }
+    to { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+/* Keep icons upright while ring rotates */
+@keyframes counter-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+@keyframes counter-rotate-reverse {
+    from { transform: rotate(-360deg); }
+    to { transform: rotate(0deg); }
+}
+
+/* Image hover effect */
+.profile-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.3);
+}
+
+/* Skill icon hover */
+.floating-icon-skill {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.floating-icon-skill:hover {
+    transform: scale(1.3) !important;
+    filter: brightness(1.3) drop-shadow(0 0 15px currentColor) !important;
+    z-index: 10 !important;
+}
         
